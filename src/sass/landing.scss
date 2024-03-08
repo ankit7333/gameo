@@ -1,0 +1,36 @@
+@import 'animation';
+@import 'variables';
+@import 'mixins';
+
+.landing{
+  &--container{
+    @include scale-up-center;
+    @include display(flex);
+    align-items:center;
+    justify-content:space-between;
+  }
+  &--bg{
+    background-image:url(../assets/images/landing_backgound.jpg);
+    @include display(flex);
+    justify-content:flex-end;
+    flex-direction:column;
+    background-color:green;
+    h1{
+      font-size:64px;
+      font-family:$inika;
+      color:$color-ffffff;
+      font-weight:600;
+      line-height:64px;
+      @include scale-up;
+      @include for-mobile-small{
+        font-size:54px;
+      }
+    }
+    p{
+      font-weight:600;
+      @include scale-up;
+      color:$color-ffffff;
+    }
+  }
+}
+

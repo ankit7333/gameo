@@ -1,0 +1,29 @@
+@import 'animation';
+@import 'variables';
+@import 'mixins';
+
+.sociallogin{
+  .button--transparent{
+    @extend .mb-20;
+  }
+}
+.icon{
+  &--fb{
+    width:35px;
+    height:35px;
+    background-image:url(../assets/images/facebook.svg);
+    background-size:35px 35px;
+  }
+  &--google{
+    @extend .icon--fb;
+    background-image:url(../assets/images/google.svg);
+  }
+  &--apple{
+    @extend .icon--fb;
+    background-image:url(../assets/images/apple.svg);
+  }
+}
+.or{
+  font-weight:500;
+}
+

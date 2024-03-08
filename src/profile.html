@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=6; IE=EDGE" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Demo</title>
+		<link href="/css/globals.css" type="text/css" rel="stylesheet" />
+		<link href="/css/header.css" type="text/css" rel="stylesheet" />
+		<link href="/css/form.css" type="text/css" rel="stylesheet" />
+		<link href="/css/sociallogin.css" type="text/css" rel="stylesheet" />
+		<link href="/css/createaccount.css" type="text/css" rel="stylesheet" />
+		<link href="/css/profile.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="container p-15">
+			<header>
+				<button class="header__left header__left--button ripple">
+					<span class="iconwrap icon--back"></span>
+				</button>
+				<span class="header__mid font24">Fill Your Profile</span>
+				<button class="header__right"></button>
+			</header>
+			<form class="form mt-20">
+				<span class="default__img">
+					<img src="assets/images/user.jpg" class="default__img" />
+					<span class="iconwrap icon--upload ripple">
+						<input type="file" />
+					</span>
+				</span>
+				<label class="form__label">
+					<input class="form__input" value="" required type="text" placeholder="Full Name" />
+				</label>
+				<label class="form__label">
+					<input class="form__input" value="" required type="text" placeholder="Nickname" />
+				</label>
+				<label class="form__label">
+					<input class="form__input" value="" required type="date" placeholder="Date of Birth" />
+				</label>
+				<label class="form__label">
+					<input class="form__input" value="" required type="email" placeholder="Email" />
+				</label>
+				<label class="form__label form__label--selectinput">
+					<span class="mr-10">
+						<select class="form__input form__input--select" value="" required>
+							<option>India</option>
+							<option>India</option>
+							<option>India</option>
+						</select>
+						<span class="icon--thinarrow"></span>
+					</span>
+					<span>
+						<input class="form__input" value="" required type="number" placeholder="+919999999999" />
+					</span>
+				</label>
+				<label class="form__label">
+					<select class="form__input" value="" required>
+						<option>Female</option>
+						<option>Male</option>
+						<option>other</option>
+					</select>
+					<span class="icon--arrow"></span>
+				</label>
+				<button class="font20 button button--primary">Continue</button>
+			</form>
+		</section>
+	</body>
+</html>

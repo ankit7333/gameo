@@ -1,0 +1,368 @@
+@import 'animation';
+@import 'variables';
+@import 'mixins';
+
+// @charset "utf-8";
+
+::placeholder{
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family:$roboto;
+  color:$color-838181;
+  font-weight:500;
+  opacity:1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder{
+  /* Internet Explorer 10-11 */
+  font-family:$roboto;
+  color:$color-838181;
+  font-weight:500;
+}
+
+::-ms-input-placeholder{
+  /* Microsoft Edge */
+  font-family:$roboto;
+  color:$color-838181;
+  font-weight:500;
+}
+
+*{
+  box-sizing:border-box;
+  outline:medium none;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  border:0;
+  vertical-align:middle;
+  object-fit:cover;
+  width:100%;
+  height:100%;
+}
+
+a{
+  text-decoration:none;
+  border:0;
+  outline:none;
+  cursor:pointer;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:focus{
+  text-decoration:none;
+  outline:0 none;
+}
+
+ul,
+ol,
+li{
+  list-style:none;
+  @extend .p-0, .m-0;
+  background:none;
+}
+
+body{
+  margin:0 auto;
+  @extend .p-0;
+  -webkit-overflow-scrolling:touch;
+  touch-action:manipulation;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+hr{
+  border:none;
+}
+
+body,input,textarea,select,button{
+  text-rendering:optimizeSpeed;
+  font-family: $inika;
+  -webkit-tap-highlight-color:transparent;
+}
+
+input[type=number].input-number–noSpinners{
+  -moz-appearance:textfield;
+}
+
+input[type=number].input-number–noSpinners::-webkit-inner-spin-button,
+input[type=number].input-number–noSpinners::-webkit-outer-spin-button{
+  -webkit-appearance:none;
+  @extend .m-0;
+}
+
+select::-ms-expand{
+  @include display(none);
+}
+
+select{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+
+p{
+  margin:0 0 10px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-size:100%;
+  @extend .p-0, .m-0;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{
+  @include display(block);
+}
+
+input::-ms-clear{
+  width:0;
+  height:0;
+}
+
+button{
+  border:0;
+  background-color:transparent;
+  cursor:pointer;
+  @include position(relative);
+  overflow:hidden;
+}
+
+input{
+  &[type='file']{
+    width:100%;
+    height:100%;
+    @include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+    opacity:0;
+  }
+  &:-webkit-autofill{
+    transition:background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color:#414e59;
+  }
+}
+
+.text{
+  &__uppercase{
+    text-transform:uppercase;
+  }
+  &__left{
+    text-align:left;
+  }
+  &__right{
+    text-align:right;
+  }
+  &__center{
+    text-align:center;
+  }
+}
+
+.anchor:hover{
+  text-decoration:underline;
+  cursor:pointer;
+  color:#0076d7;
+  @include transition(all .3s ease);
+}
+.pointer{
+  cursor:pointer;
+}
+.dn{
+  display:none !important;
+}
+.overlay{
+  @include position(fixed, $top: 0, $right: 0, $bottom: 0, $left: 0);
+  background-color:rgba($color: #000000, $alpha: .7);
+  z-index:3;
+  animation-name:fadeIn;
+  animation-duration: .4s;
+  &__transparent{
+    @extend .overlay;
+    background-color:rgba($color: $color-ffffff, $alpha: .1);
+    z-index:1;
+  }
+}
+
+.body__hidden{
+  @include position(fixed);
+  overflow:hidden;
+  width:100%;
+  touch-action:none;
+}
+
+.overflowX__hidden{
+  overflow-x:hidden;
+}
+
+/* Ripple effect */
+.ripple{
+  @include position(relative);
+  overflow:hidden;
+  &:after{
+    content:"";
+    @include display(block);
+    @include position(absolute, $top: 0, $left: 0);
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    background-image:radial-gradient(circle, $color-000000 10%, transparent 10.01%);
+    background-repeat:no-repeat;
+    background-position:50%;
+    transform:scale(10, 10);
+    opacity:0;
+    transition:transform .5s, opacity 1s;
+  }
+  &:active{
+    &:after{
+      transform:scale(0, 0);
+      opacity:.2;
+      transition:0s;
+    }
+  }
+}
+.page__animation{
+  @include slide-top;
+}
+.container{
+  width:100%;
+  height:100%;
+  &--dflex{
+    @include display(flex);
+    align-items:center;
+    justify-content:center;
+  }
+}
+.box{
+  @include border-radius(12px);
+  background-color:$color-ffffff;
+  @include box-shadow(0px, 4px, 12px, rgba(0, 0, 0, 0.12));
+  @extend .pt-30, .pl-30, .pr-30, .pb-15;
+  @include display(flex);
+  gap:10px;
+  flex-wrap:wrap;
+  @include for-mobile-xs{
+    padding:20px 20px 15px;
+  }
+  &__direction{
+    &--column{
+      flex-direction:column;
+    }
+    &--unset{
+      flex-direction:unset;
+    }
+  }
+}
+// icons css
+.height100vh{
+  height:100vh;
+}
+.iconwrap{
+  background-size:100% 100%;
+  background-position:center;
+  background-repeat:no-repeat;
+  @include display(inline-block);
+  cursor:pointer;
+  vertical-align:middle;
+  width:20px;
+  height:20px;
+}
+// button css
+.button{
+  @include border-radius(20px);
+  font-family:'Roboto';
+  @include display(flex);
+  align-items:center;
+  width:100%;
+  height:60px;
+  font-weight:500;
+  @extend .pl-25, .pr-25;
+  @include for-mobile-small{
+    padding:0 15px;
+  }
+  @include for-mobile-xs{
+    padding:0 8px;
+  }
+  &--transparent{
+    background-color:$color-FAFCFF;
+    border:1px solid $color-D3CFCF;
+    color:$color-000000;
+    @extend .ripple;
+  }
+  &--primary{
+    color:$color-ffffff;
+    background-color:$color-157BF2;
+    @include border-radius(30px);
+    justify-content:center;
+    @include box-shadow(0, 12px, 24px, rgba(21, 123, 242, 0.25));
+    @extend .ripple;
+  }
+  &--withoutbg{
+    justify-content:center;
+    color:$color-157BF2;
+    height:auto;
+  }
+}
+.label{
+  @include display(flex);
+  align-items:center;
+  input{
+    &[type=checkbox]{
+    appearance:none;
+    width:36px;
+    height:36px;
+    @include border-radius(5px);
+    border:3px solid $color-157BF2;
+    @include position(relative);
+    @extend .m-0;
+    &::before{
+      content:'';
+      @include position(absolute, $top:6px, $left:4px);
+      width:0;
+      height:3px;
+      background-color:$color-157BF2;
+      transform:translate(8px, 13px) rotate(-45deg);
+      transform-origin:left;
+      @include transition(150ms all linear);
+      transition-delay:0ms;
+    }
+    &::after{
+      content:'';
+      @include position(absolute, $top:5px, $left:5px);
+      width:0;
+      height:3px;
+      background-color:$color-157BF2;
+      transform:translate(1px, 8px) rotate(45deg);
+      transform-origin:left;
+      transition:150ms all linear;
+      transition-delay:150ms;
+    }
+    &:checked{
+      &::before{
+          width:14px;
+          transition-delay:150ms;
+        }
+        &::after{
+          width:10px;
+          transition-delay:0ms;
+        }
+      }
+    }
+  }
+}
+
+.logo{
+  width:55px;
+  height:59px;
+  background-image:url(../assets/images/logo.svg);
+  &__text{
+    font-family:$MuseoModerno;
+    color:$color-157BF2;
+    font-size:64px;
+    font-weight:800;
+  }
+}
+
+.mb-70{
+  margin-bottom:70px;
+}

@@ -1,0 +1,19 @@
+@import 'animation';
+@import 'variables';
+@import 'mixins';
+
+.continuewith{
+    color:$color-717171;
+}
+.socialicon__wrap{
+    button{
+        width:75px;
+        height:65px;
+        border:1px solid $color-DADADB;
+        @extend .ml-15, .mr-15;
+        @include border-radius(5px);
+        @include for-mobile-xs{
+            margin:0 8px;
+        }
+    }
+}

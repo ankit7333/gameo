@@ -1,0 +1,81 @@
+// Inika font
+@font-face {
+    font-family:'Inika';
+    src: url(../assets/fonts/inika/Inika-Regular.woff2) format('woff2'),
+         url(../assets/fonts/inika/Inika-Regular.woff) format('woff'),
+         url(../assets/fonts/inika/Inika-Regular.ttf) format('truetype');
+    font-weight:400;
+}
+@font-face {
+    font-family:'Inika';
+    src: url(../assets/fonts/inika/Inika-Bold.woff2) format('woff2'),
+         url(../assets/fonts/inika/Inika-Bold.woff) format('woff'),
+         url(../assets/fonts/inika/Inika-Bold.ttf) format('truetype');
+    font-weight:700;
+}
+// MuseoModerno font
+@font-face {
+    font-family:'MuseoModerno';
+    src: url(../assets/fonts/museomoderno/MuseoModerno-Regular.woff2) format('woff2'),
+         url(../assets/fonts/museomoderno/MuseoModerno-Regular.woff) format('woff'),
+         url(../assets/fonts/museomoderno/MuseoModerno-Regular.ttf) format('truetype');
+    font-weight:400;
+}
+@font-face {
+    font-family:'MuseoModerno';
+    src: url(../assets/fonts/museomoderno/MuseoModerno-Medium.woff2) format('woff2'),
+         url(../assets/fonts/museomoderno/MuseoModerno-Medium.woff) format('woff'),
+         url(../assets/fonts/museomoderno/MuseoModerno-Medium.ttf) format('truetype');
+    font-weight:500;
+}
+@font-face {
+    font-family:'MuseoModerno';
+    src: url(../assets/fonts/museomoderno/MuseoModerno-Bold.woff2) format('woff2'),
+         url(../assets/fonts/museomoderno/MuseoModerno-Bold.woff) format('woff'),
+         url(../assets/fonts/museomoderno/MuseoModerno-Bold.ttf) format('truetype');
+    font-weight:700;
+}
+// Roboto font
+@font-face {
+    font-family:'Roboto';
+    src: url(../assets/fonts/roboto/Roboto-Regular.woff2) format('woff2'),
+         url(../assets/fonts/roboto/Roboto-Regular.woff) format('woff'),
+         url(../assets/fonts/roboto/Roboto-Regular.ttf) format('truetype');
+    font-weight:400;
+}
+@font-face {
+    font-family:'Roboto';
+    src: url(../assets/fonts/roboto/Roboto-Medium.woff2) format('woff2'),
+         url(../assets/fonts/roboto/Roboto-Medium.woff) format('woff'),
+         url(../assets/fonts/roboto/Roboto-Medium.ttf) format('truetype');
+    font-weight:500;
+}
+@font-face {
+    font-family:'Roboto';
+    src: url(../assets/fonts/roboto/Roboto-Bold.woff2) format('woff2'),
+         url(../assets/fonts/roboto/Roboto-Bold.woff) format('woff'),
+         url(../assets/fonts/roboto/Roboto-Bold.ttf) format('truetype');
+    font-weight:600;
+}
+// Mulish
+@font-face {
+    font-family:'Mulish';
+    src: url(../assets/fonts/mulish/Mulish-Regular.woff2) format('woff2'),
+         url(../assets/fonts/mulish/Mulish-Regular.woff) format('woff'),
+         url(../assets/fonts/mulish/Mulish-Regular.ttf) format('truetype');
+    font-weight:400;
+}
+@font-face {
+    font-family:'Mulish';
+    src: url(../assets/fonts/mulish/Mulish-Medium.woff2) format('woff2'),
+         url(../assets/fonts/mulish/Mulish-Medium.woff) format('woff'),
+         url(../assets/fonts/mulish/Mulish-Medium.ttf) format('truetype');
+    font-weight:500;
+}
+@font-face {
+    font-family:'Mulish';
+    src: url(../assets/fonts/mulish/Mulish-Bold.woff2) format('woff2'),
+         url(../assets/fonts/mulish/Mulish-Bold.woff) format('woff'),
+         url(../assets/fonts/mulish/Mulish-Bold.ttf) format('truetype');
+    font-weight:700;
+}

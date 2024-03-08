@@ -1,0 +1,95 @@
+@import 'animation';
+@import 'variables';
+@import 'mixins';
+
+header{
+  @include display(flex);
+  align-items:center;
+  width:100%;
+}
+.header{
+  &__left{
+    @include border-radius(50%);
+    padding:0;
+    &--button{
+      width:30px;
+      height:30px;
+    }
+  }
+  &__mid{
+    flex:1;
+    color:$color-000000;
+    font-family:$roboto;
+    font-weight:600;
+    text-align:center;
+  }
+  &__right{
+    @extend .header__left;
+    @include display(flex);
+    flex:1;
+    justify-content:flex-end;
+    align-items:center;
+  }
+}
+.profilepic{
+  width:60px;
+  height:60px;
+  @include border-radius(50%);
+  @extend .ml-10;
+  @include box-shadow(0px, 4px, 12px, rgba(0, 0, 0, 0.12));
+}
+.coin{
+  width:55px;
+  height:45px;
+  border:1px solid $color-A4CDFE;
+  @include border-radius(10px);
+  background-color:$color-CFE5FF;
+  @include box-shadow(0px, 4px, 12px, rgba(0, 0, 0, 0.12));
+  @include display(flex);
+  align-items:center;
+  justify-content:center;
+  @extend .ml-15;
+  @include position(relative);
+  .notify{
+    background-color:$color-E22982;
+    border:1px solid $color-E26C29;
+  }
+}
+.cash{
+  @extend .coin;
+  .notify{
+    background-color:$color-E22982;
+    border:1px solid $color-E26C29;
+  }
+}
+.icon{
+  &--back{
+    width:20px;
+    height:20px;
+    background-image:url(../assets/images/back.svg);
+    @include border-radius(50%);
+  }
+  &--coin{
+    width:32px;
+    height:27px;
+    background-image:url(../assets/images/coin.svg);
+  }
+  &--cash{
+    width:55px;
+    height:45px;
+    background-image:url(../assets/images/cash.svg);
+  }
+}
+.notify{
+  width:30px;
+  height:30px;
+  @include border-radius(50%);
+  @include display(flex);
+  align-items:center;
+  justify-content:center;
+  color:$color-ffffff;
+  @include position(absolute, $left:-15px, $top:-20px);
+  @extend .font14;
+  line-height:29px;
+}
+

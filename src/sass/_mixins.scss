@@ -1,0 +1,160 @@
+@mixin for-desktop{
+    @media (min-width:960px){
+        @content;
+    }
+}
+@mixin for-ipad{
+    @media (min-width:768px){
+        @content;
+    }
+}
+@mixin for-mobile{
+    @media (max-width:767px){
+        @content;
+    }
+}
+@mixin for-mobile-414{
+    @media (min-width:414px) and (max-width:767px){
+        @content;
+    }
+}
+@mixin for-mobile-small{
+    @media (max-width:375px){
+        @content;
+    }
+}
+@mixin for-mobile-xs{
+    @media (max-width:320px){
+        @content;
+    }
+}
+@mixin position($position, $top:null, $right:null, $bottom:null, $left:null) {
+    position:$position;
+    bottom:$bottom;
+    right:$right;
+    left:$left;
+    top:$top;
+}
+@mixin transition($transition...){
+    -webkit-transition:$transition;
+    -moz-transition:$transition;
+    -o-transition:$transition;
+    transition:$transition;
+}
+@mixin border-radius($top-left:null, $top-right:null, $bottom-right:null, $bottom-left:null){
+    -webkit-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    -moz-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    -ms-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    border-radius:$top-left $top-right $bottom-right $bottom-left;  
+  }
+@mixin box-shadow($x-axis:0, $y-axis:1px, $blur:2px, $color:$default) {
+    box-shadow:$x-axis $y-axis $blur $color;
+}
+@mixin display($value){
+    display:$value;
+}
+@mixin slide-top{
+    -webkit-animation:slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation:slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@mixin scale-up{
+    -webkit-animation:scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation:scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@mixin scale-up-center{
+	-webkit-animation:scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation:scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@mixin line_clamp{
+    display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden
+    &_1{
+        -webkit-line-clamp:1;
+    }
+    &_2{
+        -webkit-line-clamp:2;
+    }
+    &_3{
+        -webkit-line-clamp:3;
+    }
+}
+@for $i from 0 through 30{
+    //font-size classes
+    $fontSizes:(font#{$i}:($i + px));
+    @each $key, $value in $fontSizes {
+        .#{$key}{
+        font-size:$value;
+        }
+    }
+
+    //margin classes
+    $margin:(m-#{$i}:($i + px));
+    @each $key, $value in $margin{
+        .#{$key}{
+        margin:$value;
+        }
+    }
+
+    $marginTop:(mt-#{$i}:($i + px));
+    @each $key, $value in $marginTop{
+        .#{$key}{
+        margin-top:$value;
+        }
+    }
+
+    $marginBottom:(mb-#{$i}:($i + px));
+    @each $key, $value in $marginBottom{
+        .#{$key}{
+        margin-bottom: $value;
+        }
+    }
+
+    $marginLeft: (ml-#{$i}:($i + px));
+    @each $key, $value in $marginLeft{
+        .#{$key}{
+        margin-left:$value;
+        }
+    }
+
+    $marginRight:(mr-#{$i}:($i + px));
+    @each $key, $value in $marginRight{
+        .#{$key}{
+        margin-right:$value;
+        }
+    }
+
+    //padding classes
+    $padding:(p-#{$i}:($i + px));
+    @each $key, $value in $padding{
+        .#{$key}{
+        padding:$value;
+        }
+    }
+
+    $paddingTop:(pt-#{$i}:($i + px));
+    @each $key, $value in $paddingTop{
+        .#{$key}{
+        padding-top:$value;
+        }
+    }
+
+    $paddingBottom:(pb-#{$i}:($i + px));
+    @each $key, $value in $paddingBottom{
+        .#{$key}{
+        padding-bottom:$value;
+        }
+    }
+
+    $paddingLeft:(pl-#{$i}:($i + px));
+    @each $key, $value in $paddingLeft{
+        .#{$key}{
+        padding-left:$value;
+        }
+    }
+
+    $paddingRight:(pr-#{$i}:($i + px));
+    @each $key, $value in $paddingRight{
+        .#{$key}{
+        padding-right:$value;
+        }
+    }
+}

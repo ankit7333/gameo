@@ -1,0 +1,144 @@
+@import 'animation';
+@import 'variables';
+@import 'mixins';
+
+.form{
+    font-family:$roboto;
+    @include display(flex);
+    flex-direction:column;
+    align-items:center;
+    @include slide-top;
+    &__logo{
+        width:99px;
+        height:99px;
+        @extend .mb-30;
+        background-image:url(../assets/images/logo.svg);
+    }
+    &__title{
+        font-size:40px;
+        font-weight:700;
+        @extend .mb-20, .pb-20;
+        @include for-mobile-small{
+            font-size:28px;
+        }
+    }
+    &__label{
+        @include display(flex);
+        align-items:center;
+        width:100%;
+        height:50px;
+        @include position(relative);
+        @extend .mb-20;
+        &--selectinput{
+            @extend .form__input;
+            >span{
+                @include position(relative);
+            }
+            .form__input{
+                @extend .p-0;
+                border:0;
+                background:transparent;
+                @include border-radius(0);
+                &--select{
+                    min-width:50px;
+                }
+            }
+        }
+        &--icon{
+            flex-direction:row-reverse;
+            @include position(relative);
+            height:60px;
+            .iconwrap{
+                @include position(absolute, $top:50%, $left:20px);
+            }
+            .form__input{
+                text-indent:35px;
+                background-color:$color-FAFCFF;
+                &:focus{
+                    border:2px solid $color-157BF2;
+                    @include transition(all .5s ease-in-out);
+                }
+                &:valid{
+                    ~ .icon{
+                        &--email{
+                            background-image:url(../assets/images/email__active.svg);
+                        }
+                        &--password{
+                            background-image:url(../assets/images/password__active.svg);
+                        }
+                        &--eye{
+                            background-image:url(../assets/images/eye__active.svg); 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__input{
+        font-family:$roboto;
+        background-color:$color-F5F5F5;
+        color:$color-161616;
+        height:100%;
+        width:100%;
+        @extend .p-0;
+        font-weight:500;
+        flex:1;
+        @extend .p-10;
+        border:2px solid $color-D3CFCF;
+        @include border-radius(20px);
+        @include transition(all .5s ease-in-out);
+    }
+}
+.signup{
+    color:$color-AEAEAE;
+    font-weight:500;
+    a{
+      color:$color-157BF2;
+    }
+}
+.icon{
+    &--email{
+        width:20px;
+        height:16px;
+        margin-top:-8px;
+        background-image:url(../assets/images/email.svg);
+    }
+    &--password{
+        width:16px;
+        height:21px;
+        margin-top:-10px;
+        background-image:url(../assets/images/password.svg);
+    }
+    &--eye{
+        width:22px;
+        height:19px;
+        margin-top:-9px;
+        background-image:url(../assets/images/eye.svg);
+        @include position(absolute, $right:20px !important, $left:unset !important);
+    }
+    &--arrow{
+        width: 0;
+        height: 0;
+        border-left:6px solid transparent;
+        border-right:6px solid transparent;
+        border-top:6px solid black;
+        @include position(absolute, $top:50%, $right:15px);
+        margin-top:-2px;
+    }
+    &--thinarrow{
+        content:"";
+        @include position(absolute, $top:50%, $right:5px);
+        z-index:1;
+        @include display(block);
+        width:10px;
+        height:10px;
+        border-top:2px solid $color-000000;
+        border-left:2px solid $color-000000;
+        transform:rotate(225deg);
+        margin-top:-6px;
+    }
+}
+.remember__me{
+    color:$color-000000;
+    font-weight:500;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=6; IE=EDGE" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Demo</title>
+		<link href="/css/globals.css" type="text/css" rel="stylesheet" />
+		<link href="/css/header.css" type="text/css" rel="stylesheet" />
+		<link href="/css/form.css" type="text/css" rel="stylesheet" />
+		<link href="/css/sociallogin.css" type="text/css" rel="stylesheet" />
+		<link href="/css/createaccount.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="container p-20">
+			<header>
+				<button class="header__left header__left--button">
+					<span class="iconwrap icon--back"></span>
+				</button>
+				<span class="header__mid"></span>
+				<button class="header__right"></button>
+			</header>
+			<form class="form mt-20">
+				<span class="iconwrap form__logo"></span>
+				<span class="form__title">Create new account</span>
+				<label class="form__label form__label--icon">
+					<input class="form__input" value="" required type="email" placeholder="Email" />
+					<span class="iconwrap icon--email"></span>
+				</label>
+				<label class="form__label form__label--icon">
+					<input class="form__input" type="password" value="" required placeholder="Password" />
+					<span class="iconwrap icon--password"></span>
+					<span class="iconwrap icon--eye"></span>
+				</label>
+				<label class="remember__me label mb-20">
+					<input type="checkbox" />
+					<span class="font20 ml-15">Remember me</span>
+				</label>
+				<button class="font20 button button--primary">Sign up</button>
+				<span class="font20 mt-30 mb-30 continuewith">or continue with</span>
+				<div class="socialicon__wrap">
+					<button class="iconwrap icon--fb" />
+					<button class="iconwrap icon--google" />
+					<button class="iconwrap icon--apple" />
+				</div>
+				<span class="font18 signup mt-30 mb-30">Already have an account? <a href="#">Sign in</a></span>
+			</form>
+		</section>
+	</body>
+</html>
